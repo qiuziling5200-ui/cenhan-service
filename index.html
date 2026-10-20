@@ -408,8 +408,8 @@ tr:hover td{background:rgba(46,135,64,.12) !important;}
 .xpm-subnav a{background:var(--c-card) !important;border:1px solid rgba(46,135,64,.4) !important;color:#23620F !important;}
 .xpm-subnav a:hover{background:var(--c-acc) !important;color:#fff !important;}
 .xpm-navgroup-tag{background:var(--c-acc) !important;}
-.xpm-navgroup a{background:var(--c-card) !important;border:1px solid rgba(46,135,64,.4) !important;color:#23620F !important;}
-.xpm-navgroup a:hover{background:var(--c-acc) !important;color:#fff !important;}
+.xpm-navgroup a{background:var(--c-card) !important;border:1px solid rgba(198,40,40,.4) !important;color:#C62828 !important;}
+.xpm-navgroup a:hover{background:#C62828 !important;color:#fff !important;}
 .xpm-sec{background:var(--c-card) !important;box-shadow:0 2px 12px rgba(0,0,0,.3) !important;}
 .xpm-sec-title{color:#0B0B0B !important;font-weight:800 !important;}
 .xpm-sec-title .num{background:var(--c-acc) !important;}
@@ -431,14 +431,14 @@ tr:hover td{background:rgba(46,135,64,.12) !important;}
 .xpm-banner-tail{background:linear-gradient(135deg,var(--c-wine3),var(--c-wine1)) !important;}
 /* 底板&平移 db */
 .db-sec{background:var(--c-card) !important;border:1px solid var(--c-line) !important;}
-.db-sec-h{color:#0B0B0B !important;font-weight:800 !important;}
-.db-rule-head{color:#fff !important;}
+.db-sec-h{color:#C62828 !important;font-weight:800 !important;}
+.db-rule-head{color:#C62828 !important;}
 .db-rule p{color:var(--c-text) !important;}
-.db-example.bad{background:rgba(76,138,80,.14) !important;color:#2E7D32 !important;}
-.db-example.good{background:rgba(46,125,50,.14) !important;color:#8fd99a !important;}
+.db-example.bad{background:rgba(198,40,40,.10) !important;color:#C62828 !important;}
+.db-example.good{background:rgba(198,40,40,.10) !important;color:#2E7D32 !important;}
 .db-item{background:var(--c-bg2) !important;color:var(--c-text) !important;}
 .db-ul li{color:var(--c-text) !important;}
-.db-warn{color:#23620F !important;}
+.db-warn{color:#C62828 !important;}
 .db-price{background:#0d0d12 !important;color:#fff !important;}
 .db-price-eg{color:var(--c-text) !important;background:var(--c-bg2) !important;}
 /* 类目路径复制 */
@@ -1224,6 +1224,28 @@ background:rgba(0,0,0,.35);padding:5px 12px;border-radius:999px}
 #xmas-gallery .toc{top:66px;padding:12px 0;}
 #xmas-gallery .pg{padding:28px 0 14px;scroll-margin-top:132px;}
 #xmas-gallery .ft{padding:22px 0 10px;}
+/* ================== 底板&平移&核价指南 新增模块 ================== */
+.nm-sub{font-size:13px;color:#C62828 !important;font-weight:700;margin-top:2px;line-height:1.6}
+.nm-quote{background:#FFF1F1 !important;border:1px solid #EF9A9A !important;color:#B71C1C !important;font-size:13px;line-height:1.75;padding:8px 12px;border-radius:8px;margin:6px 0}
+.nm-grid{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 12px}
+.nm-grid>.nm-card{flex:1 1 250px;min-width:220px}
+.nm-card{background:#FFF5F5 !important;border:1px solid #F3C2C2 !important;border-left:4px solid #C62828 !important;border-radius:10px;padding:10px 12px}
+.nm-card-t{font-size:12px;font-weight:800;color:#C62828 !important;letter-spacing:.5px}
+.nm-card-b{font-size:13px;color:#33493C !important;line-height:1.75;margin-top:4px}
+.nm-note{font-size:13px;color:#33493C !important;line-height:1.9;margin:2px 0 10px}
+.nm-note b{color:#C62828 !important;font-weight:800}
+.nm-table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;margin:8px 0}
+.nm-table th{padding:9px 12px;background:linear-gradient(135deg,#C62828,#E57373) !important;color:#fff !important;text-align:center;font-weight:700;font-size:12.5px;line-height:1.6;border:none}
+.nm-table th:first-child{border-radius:8px 0 0 0}
+.nm-table th:last-child{border-radius:0 8px 0 0}
+.nm-table td{padding:9px 12px;border:1px solid #F3C2C2 !important;text-align:center;color:#22342A !important;background:#fff;width:auto}
+.nm-table td.nm-eq{text-align:left;font-family:Consolas,monospace;font-size:12px;color:#33493C !important}
+.nm-table tr:nth-child(odd) td{background:#FFF9F9}
+.nm-table td.nm-hl{color:#C62828 !important;font-weight:800}
+.nm-sum{background:#FFF5F5 !important;border:1px solid #F3C2C2 !important;color:#33493C !important}
+.nm-sum b{color:#C62828 !important}
+.nm-foot{font-size:12px;color:#6E8F73 !important;margin-top:6px;letter-spacing:.3px}
+#banping .db-rule-head{color:#C62828 !important;}
 </style>
 </head>
 <body>
@@ -1256,7 +1278,7 @@ background:rgba(0,0,0,.35);padding:5px 12px;border-radius:999px}
   <div class="nav">
 <a class="nav-item active" onclick="navTo('overview')"><span class="nav-icon">🏠</span><span>招商总览</span></a>
 <a class="nav-item" onclick="navTo('category')"><span class="nav-icon">📋</span><span>类目指引</span></a>
-<a class="nav-item" onclick="navTo('banping')"><span class="nav-icon">🧩</span><span>底板&amp;平移</span></a>
+<a class="nav-item" onclick="navTo('banping')"><span class="nav-icon">🧩</span><span>底板&amp;平移&amp;核价指南</span></a>
 <a class="nav-item" onclick="navTo('trend')"><span class="nav-icon">📈</span><span>市场趋势</span></a>
 
 <div class="nav-group">
@@ -1470,41 +1492,42 @@ background:rgba(0,0,0,.35);padding:5px 12px;border-radius:999px}
 
 
 <div class="section" id="banping">
-  <div class="section-title">底板 &amp; 平移</div>
+  <div class="section-title">底板 &amp; 平移 &amp; 核价指南</div>
 
   <div class="xpm-navwrap" style="margin-bottom:16px">
-    <div class="xpm-navgroup"><span class="xpm-navgroup-tag">建品要点</span>&nbsp;<a href="#db-pod" style="font-size:13px;color:#2E8740;text-decoration:none">POD底版创建要点</a>&nbsp;·&nbsp;<a href="#db-jy" style="font-size:13px;color:#2E8740;text-decoration:none">寄样须知</a></div>
-    <div class="xpm-navgroup" style="margin-top:8px"><span class="xpm-navgroup-tag">平移技巧</span>&nbsp;<a href="#db-py1" style="font-size:13px;color:#2E8740;text-decoration:none">互相平移</a>&nbsp;·&nbsp;<a href="#db-py2" style="font-size:13px;color:#2E8740;text-decoration:none">组合套装</a>&nbsp;·&nbsp;<a href="#db-py3" style="font-size:13px;color:#2E8740;text-decoration:none">多件装</a>&nbsp;·&nbsp;<a href="#db-py4" style="font-size:13px;color:#2E8740;text-decoration:none">注意事项</a></div>
+    <div class="xpm-navgroup"><span class="xpm-navgroup-tag">建品要点</span>&nbsp;<a href="#db-pod" style="font-size:13px;color:#C62828;text-decoration:none">POD底版创建要点</a>&nbsp;·&nbsp;<a href="#db-jy" style="font-size:13px;color:#C62828;text-decoration:none">寄样须知</a></div>
+    <div class="xpm-navgroup" style="margin-top:8px"><span class="xpm-navgroup-tag">平移技巧</span>&nbsp;<a href="#db-py1" style="font-size:13px;color:#C62828;text-decoration:none">互相平移</a>&nbsp;·&nbsp;<a href="#db-py2" style="font-size:13px;color:#C62828;text-decoration:none">组合套装</a>&nbsp;·&nbsp;<a href="#db-py3" style="font-size:13px;color:#C62828;text-decoration:none">多件装</a>&nbsp;·&nbsp;<a href="#db-py4" style="font-size:13px;color:#C62828;text-decoration:none">注意事项</a></div>
+    <div class="xpm-navgroup" style="margin-top:8px"><span class="xpm-navgroup-tag">核价指南</span>&nbsp;<a href="#db-price" style="font-size:13px;color:#C62828;text-decoration:none">核价高低的影响</a>&nbsp;·&nbsp;<a href="#db-tuling" style="font-size:13px;color:#C62828;text-decoration:none">图灵通过后续指引</a></div>
   </div>
 
   <div class="db-sec" id="db-pod" style="border-left:4px solid #23620F">
-    <div class="db-sec-h" style="color:#23620F;display:block"><span>■</span>POD 底版创建要点<div style="font-size:13px;color:#3E7E46;font-weight:700;margin-top:2px;line-height:1.5">（新流程 超快的！！！底板通过率很高，新版速度对接过来~）</div>
+    <div class="db-sec-h" style="color:#C62828;display:block"><span>■</span>POD 底版创建要点<div style="font-size:13px;color:#C62828;font-weight:700;margin-top:2px;line-height:1.5">（新流程 超快的！！！底板通过率很高，新版速度对接过来~）</div>
     <div class="db-rule">
-      <div class="db-rule-head" style="color:#23620F">一、标题须包含商品主体信息</div>
+      <div class="db-rule-head" style="color:#C62828">一、标题须包含商品主体信息</div>
       <p>标题中必须明确标注售卖商品的主体信息，否则容易命中平台作恶行为判定。</p>
       <div class="db-example bad">❌ 错误示例：【岑寒选品】底版不上架 — 缺少商品主体信息</div>
       <div class="db-example good">✅ 正确示例：【岑寒选品】女童卫衣 底版不上架 — 含售卖主体"女童卫衣"</div>
     </div>
     <div class="db-rule">
-      <div class="db-rule-head" style="color:#23620F">二、标题禁止包含误导性数字信息</div>
+      <div class="db-rule-head" style="color:#C62828">二、标题禁止包含误导性数字信息</div>
       <p>标题命名中不得含有与商品件数无关、可能误导消费者的数字信息（如"6个印花点位"等描述）。</p>
     </div>
     <div class="db-rule">
-      <div class="db-rule-head" style="color:#23620F">三、商品图片须清晰高质量</div>
+      <div class="db-rule-head" style="color:#C62828">三、商品图片须清晰高质量</div>
       <p>商品图片必须为清晰、高质量的画面，禁止使用拼接或低画质图片作为底版素材。</p>
     </div>
     <div class="db-rule">
-      <div class="db-rule-head" style="color:#23620F">四、图片须带有印花图案</div>
+      <div class="db-rule-head" style="color:#C62828">四、图片须带有印花图案</div>
       <p>底版图片必须包含印花图案，净色（纯色）商品不可作为底版使用。</p>
     </div>
     <div class="db-rule">
-      <div class="db-rule-head" style="color:#23620F">五、底板创建时效</div>
-      <p>审版通过后，当天系统出建议价，商家通过价格后<b style="color:#3E7E46">约 2H</b> 自动创建套版组。</p>
+      <div class="db-rule-head" style="color:#C62828">五、底板创建时效</div>
+      <p>审版通过后，当天系统出建议价，商家通过价格后<b style="color:#C62828">约 2H</b> 自动创建套版组。</p>
     </div>
   </div>
 
   <div class="db-sec" id="db-jy" style="border-left:4px solid #2E8740;background:rgba(46,135,64,.12)">
-    <div class="db-sec-h" style="color:#23620F"><span>🏷</span>寄样须知</div>
+    <div class="db-sec-h" style="color:#C62828"><span>🏷</span>寄样须知</div>
     <div class="db-item" style="background:#FFF3E0;border:1px solid #ffe0b2">💡 底板实物寄样：上新务必勾选"底板"；<b>寄样尺码必须和系统选品尺码保持一致</b></div>
     <div style="overflow-x:auto">
   <table style="width:100%;border-collapse:separate;border-spacing:0;font-size:13px;margin:8px 0">
@@ -1516,22 +1539,78 @@ background:rgba(0,0,0,.35);padding:5px 12px;border-radius:999px}
       </tr>
     </thead>
     <tbody>
-      <tr><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">婴童尺码</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">4Y</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#2E8740;font-weight:700">100cm</td></tr>
-      <tr><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">中小童尺码</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">8Y</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#2E8740;font-weight:700">130cm</td></tr>
-      <tr><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">中大童尺码</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">14Y</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#2E8740;font-weight:700">160cm</td></tr>
-      <tr><td colspan="3" style="padding:7px 12px;border:1px solid #C4E3CB;background:rgba(46,135,64,.12);color:#23620F;text-align:left;font-size:12px;line-height:1.8">📌 样衣尺码建议：婴童 4Y → 100cm；中小童 8Y → 130cm；中大童 14Y → 160cm，并按对应码段寄样。</td></tr>
+      <tr><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">婴童尺码</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">4Y</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#C62828;font-weight:700">100cm</td></tr>
+      <tr><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">中小童尺码</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">8Y</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#C62828;font-weight:700">130cm</td></tr>
+      <tr><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">中大童尺码</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#22342A">14Y</td><td style="padding:9px 12px;border:1px solid #C4E3CB;text-align:center;color:#C62828;font-weight:700">160cm</td></tr>
+      <tr><td colspan="3" style="padding:7px 12px;border:1px solid #C4E3CB;background:rgba(46,135,64,.12);color:#C62828;text-align:left;font-size:12px;line-height:1.8">📌 样衣尺码建议：婴童 4Y → 100cm；中小童 8Y → 130cm；中大童 14Y → 160cm，并按对应码段寄样。</td></tr>
     </tbody>
   </table>
 </div>
     <div class="db-item">📋 样衣包裹：必须贴上<b>样品条码</b>及<b>SPU 条码</b></div>
     <div class="db-item">📍 寄样地址：深圳市南山区梦海大道5073号 前海国际人才港B塔29楼【G-印花组】</div>
     <div class="db-item">👤 收件人：岑寒 18570028178</div>
-    <div class="db-item" style="background:#DFF6D5;border:1px solid #39B54A;font-size:17px;font-weight:800;color:#0A7A1F;text-shadow:0 0 5px #c8ffa0,0 0 10px #3dff55,0 0 18px #00d94e">🏷 所有底板链接标题务必完整填写，<b style="background:#C9F7C4;padding:0 3px;border-radius:3px;color:#009100;text-shadow:0 0 4px #fff,0 0 9px #39ff14,0 0 16px #00e676">避免影响价格申报。</b><br><span style="display:inline-block;margin-top:4px;font-size:13px;font-weight:600;color:#3E6B2E;text-shadow:none">标题参考格式：<b>[人群]+[品类词]+[场景词]+[功能/图案]+[袖长]+[领型]+[穿着方式]+[风格]+[季节/版型]+[细节/面料/颜色]+[节日]</b></span></div>
+    <div class="db-item" style="background:#FFF1F1;border:1px solid #EF9A9A;font-size:17px;font-weight:800;color:#C62828;text-shadow:0 0 5px #ffd6d6,0 0 10px #ff8a8a,0 0 18px #ef5350">🏷 所有底板链接标题务必完整填写，<b style="background:#FFDCDC;padding:0 3px;border-radius:3px;color:#B71C1C;text-shadow:0 0 4px #fff,0 0 9px #ff8a8a,0 0 16px #ef5350">避免影响价格申报。</b><br><span style="display:inline-block;margin-top:4px;font-size:13px;font-weight:600;color:#B71C1C;text-shadow:none">标题参考格式：<b>[人群]+[品类词]+[场景词]+[功能/图案]+[袖长]+[领型]+[穿着方式]+[风格]+[季节/版型]+[细节/面料/颜色]+[节日]</b></span></div>
   </div>
 
-  <div class="db-sec" id="db-py1" style="border-left:4px solid #1F6E2A">
-    <div class="db-sec-h" style="color:#1F6E2A;display:block"><span>■</span>底板平移小技巧<div style="font-size:13px;color:#3E7E46;font-weight:700;margin-top:2px;line-height:1.5">（新流程 超快的！！！底板通过率很高，新版速度对接过来~）</div>
-    <div class="db-rule-head" style="color:#1F6E2A">一、男女童底板互相平移方法</div>
+
+  
+  <div class="db-sec" id="db-price" style="border-left:4px solid #C62828">
+    <div class="db-sec-h" style="color:#C62828;display:block"><span>💰</span>核价指南 · 核价太高有什么坏处？<div class="nm-sub">（核价不是越高越好 —— 报活动越积极，核价越高反而越吃亏。全托管 · 加站卖全球，汇率参考 7.18，美国前端售价仅供参考）</div></div>
+    <div class="nm-quote">🗣️ 有商家说：“买手开始忽悠人了，核价高还有坏处？打死我都不信，我做活动不就好了。” —— 先把下面 4 个价格搞懂，答案就清楚了。</div>
+
+    <div class="db-rule-head">一、先搞懂 4 个关键价格</div>
+    <div class="nm-grid">
+      <div class="nm-card"><div class="nm-card-t">① 日常供货价</div><div class="nm-card-b">核价通过后的价格，叫做日常供货价。</div></div>
+      <div class="nm-card"><div class="nm-card-t">② 日常售卖价</div><div class="nm-card-b">日常供货价对应的售卖价格叫做日常售卖价。由于全托管是加站卖全球，无法进行公式计算，且跟实物重量有关。</div></div>
+      <div class="nm-card"><div class="nm-card-t">③ 活动供货价</div><div class="nm-card-b">报名活动之后的折扣价格，叫做活动供货价。</div></div>
+      <div class="nm-card"><div class="nm-card-t">④ 活动售价</div><div class="nm-card-b">活动供货价对应的售卖价格叫做活动售价。<br>活动售价 = 日常售价 −（日常供货价 − 活动供货价）<br><span style="color:#B71C1C">（你降多少，我们前端跟着降多少）</span></div></div>
+    </div>
+
+    <div class="db-rule-head">二、举例：核价不同、活动价格一致时</div>
+    <p class="nm-note">假如核价价格不同、活动价格一致时，可能出现如下情况（以下参考美国前端售价、汇率按 7.18 计算，仅供参考）：</p>
+    <div style="overflow-x:auto">
+      <table class="nm-table">
+        <thead>
+          <tr>
+            <th>核价结果</th>
+            <th>活动价格</th>
+            <th>日常售卖价</th>
+            <th>活动售价（= 日常售价 −（核价 − 活动价）/ 7.18）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="nm-hl">25</td><td>20</td><td>10.99</td><td class="nm-eq">= 10.99 − (25-20)/7.18 = 10.29</td></tr>
+          <tr><td>35</td><td>20</td><td>12.99</td><td class="nm-eq">= 12.99 − (35-20)/7.18 = 10.90</td></tr>
+          <tr><td>50</td><td>20</td><td>18.99</td><td class="nm-eq">= 18.99 − (50-20)/7.18 = 14.80</td></tr>
+          <tr><td>80</td><td>20</td><td>25.99</td><td class="nm-eq">= 25.99 − (80-20)/7.18 = 17.63</td></tr>
+          <tr><td class="nm-hl">100</td><td>20</td><td>32.99</td><td class="nm-eq">= 32.99 − (100-20)/7.18 = 21.80</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="db-price">核价越高 → 报活动越吃亏</div>
+    <div class="db-price-eg nm-sum"><b>总结：价格适中即可，不用追求过高。</b>能卖出去的，才是你拿到的。核价越高，日常供货价越高，报活动越是吃亏；上表的日常售卖价格取自实物克重差不多的产品在不同核价价格时的前端售价参考值，仅供参考。</div>
+  </div>
+
+  <div class="db-sec" id="db-tuling" style="border-left:4px solid #C62828">
+    <div class="db-sec-h" style="color:#C62828;display:block"><span>🧾</span>底板图灵后续指引 · 价格通过后要做什么<div class="nm-sub">（核价通过只是开始 —— CPC 检测、人工稽查、底板平移，三件事要跟上）</div></div>
+
+    <div class="db-rule-head">一、速度做 CPC 检测</div>
+    <p class="nm-note">一般一周多出报告。需要联系检测机构，可以在服务市场下单，也可以找运营推。</p>
+
+    <div class="db-rule-head">二、高位底板会被人工稽查</div>
+    <p class="nm-note">图灵通过的底板价格，人工会稽查。<b>高价底板有几率被稽查到关停</b>，按备注的价格调价后联系运营重启。注意安排发品先套版、抢时效：没有 CPC 可以先套版过核价、不加库存，出报告后再加库存、加站，避免高价底板被稽查关停还没套版、浪费资源。</p>
+
+    <div class="db-rule-head">三、底板平移需重新走图灵核价</div>
+    <p class="nm-note">图灵价格通过的底板，平移新底板一样要重新走图灵、重新核价，<b>无法拉齐</b>，请知悉。能做就确认价格，不能做就拒绝价格、终止底板即可（建议：不低于心理价的直接确认）。</p>
+
+    <div class="db-price">先套版抢时效 → 出报告加库存加站 → 平移重新核价</div>
+    <div class="nm-foot">电商运营宣导 · 常规运营说明</div>
+  </div>
+
+<div class="db-sec" id="db-py1" style="border-left:4px solid #1F6E2A">
+    <div class="db-sec-h" style="color:#C62828;display:block"><span>■</span>底板平移小技巧<div style="font-size:13px;color:#C62828;font-weight:700;margin-top:2px;line-height:1.5">（新流程 超快的！！！底板通过率很高，新版速度对接过来~）</div>
+    <div class="db-rule-head" style="color:#C62828">一、男女童底板互相平移方法</div>
     <ul class="db-ul">
       <li>更换品类路径：男童 ↔ 女童</li>
       <li>修改商品属性：性别属性改为"女童"</li>
@@ -1539,7 +1618,7 @@ background:rgba(0,0,0,.35);padding:5px 12px;border-radius:999px}
       <li>属性填写：印花工艺、面料成分、版型、尺码等需如实填写</li>
       <li class="db-warn">⚠️ 注意：13Y 以上尺码可能因跳码不同平移失败，请及时联系运营咨询。</li>
     </ul>
-    <div class="db-rule-head" style="color:#23620F">二、单件底板组合套装底板</div>
+    <div class="db-rule-head" style="color:#C62828">二、单件底板组合套装底板</div>
     <ul class="db-ul">
       <li>按照平移格式发运营，创建套装底板</li>
       <li>已有上装套版组 skc</li>
@@ -1547,17 +1626,17 @@ background:rgba(0,0,0,.35);padding:5px 12px;border-radius:999px}
       <li>组合新套装底板 skc</li>
       <li class="db-warn">⚠️ 注意：上下装寄样尺码需一致，码段需一致。</li>
     </ul>
-    <div class="db-rule-head" style="color:#23620F">三、单件平移多件装底板</div>
+    <div class="db-rule-head" style="color:#C62828">三、单件平移多件装底板</div>
     <div class="db-price">多件装价格 = 单件价格 × 件数 − 件数 × 0.5</div>
     <div class="db-price-eg">举例：单件价格 10，三件价格 = 10 × 3 − 3 × 0.5 = 28.5</div>
   </div>
 
   <div class="db-sec" id="db-py4" style="border-left:4px solid #2E8740">
-    <div class="db-sec-h" style="color:#2E8740"><span>✓</span>四、常见底板平移注意事项</div>
+    <div class="db-sec-h" style="color:#C62828"><span>✓</span>四、常见底板平移注意事项</div>
     <ol class="xpm-rule-list" style="margin:8px 0 0;padding-left:22px">
       <li style="margin:5px 0;font-size:13px;color:#33493C">新老底板属性需一致（尺码、码段、属性、印花数量等不一致需及时同步）。</li>
       <li style="margin:5px 0;font-size:13px;color:#33493C">点寄样再填“平移”问卷：<a href="https://seller.kuajingmaihuo.com/questionnaire?surveyId=56738723070" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#2E8740,#4CAF50);color:#fff;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none;margin-left:4px">📝 点击填写平移问卷</a></li>
-      <li style="margin:5px 0;font-size:13px;color:#33493C">平移时效说明：签收后审版 <b style="color:#3E7E46">2 天</b>内，审版通过后，当天系统出建议价，商家通过价格后约 2H 自动创建套版组。</li>
+      <li style="margin:5px 0;font-size:13px;color:#33493C">平移时效说明：签收后审版 <b style="color:#C62828">2 天</b>内，审版通过后，当天系统出建议价，商家通过价格后约 2H 自动创建套版组。</li>
       <li style="margin:5px 0;font-size:13px;color:#33493C">价格问题注意：平移也是系统给建议价，价格不固定，商家自行判断是否确认价格。</li>
       <li style="margin:5px 0;font-size:13px;color:#33493C">套版组创建后操作下架，不要上架不要加站，避免降价或活动影响套版组价格。</li>
     </ol>
@@ -3892,9 +3971,7 @@ function closeFeedback(){ document.getElementById('fbMask').classList.remove('op
     }
 
     /* ---------- 3. 侧边栏：圣诞条幅 + 圣诞帽 ---------- */
-    var sb = d.querySelector(".sidebar");
-    if (sb) sb.insertAdjacentHTML("afterbegin",
-      '<div class="xmas-side">🎄 圣诞快乐 · Merry Xmas 🎅</div>');
+    /* 侧边栏圣诞条幅已按需求移除 */
     var brand = d.querySelector(".badge-banner .bb-tag") || d.querySelector(".bb-tag");
     if (brand && !brand.querySelector(".xmas-santa")) {
       brand.insertAdjacentHTML("beforeend", '<span class="xmas-santa" aria-hidden="true"><i></i></span>');
